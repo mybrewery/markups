@@ -1,0 +1,158 @@
+.material-icons {
+    font-family: 'Material Icons';
+    color: white;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+@-webkit-keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.flex-end {
+    align-items: flex-end;
+}
+
+.none {
+    position: absolute;
+    display: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #00010a;
+    outline: none;
+}
+
+#container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .button {
+    width: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}/*
+
+.slider .button .arrow {
+    width: 0;
+    height: 0;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    transition: 0.3s;
+    transform: rotate(135deg);
+    opacity: 0;
+    transform-origin: 50% 50%;
+}*/
+
+.slider .button:last-child {
+    right: 0%;
+    text-align: right;
+}
+
+.slider:hover .prev .arrow {
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+.slider:hover .next .arrow {
+    border-right: 4px solid white;
+    border-top: 4px solid white;
+}
+
+.slider:hover .arrow{
+/*    border: 4px solid white;
+*/  opacity: 1;
+    border-width: 8px;
+    transition: 0.3s;
+    /*border-left: 1px solid white;
+    border-bottom: 1px solid white;*/
+    transform: rotate(45deg);
+    height: 16px;
+    width: 16px;
+}
+
+
+.slider {
+    position: relative; 
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider .box {
+    display: none;
+    width: 100%;
+    margin: 0;
+}
+
+.fade {
+    animation: appear 1s;
+}
+
+#container .slider .box img {
+    width: 100%;
+}
+
+
+
