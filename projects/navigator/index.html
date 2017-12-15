@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>explorer</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="TweenMax.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript" src="explorer.js"></script>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function () {
+			var siteConfig = {
+				content :[
+					[1, 2, 3],
+					[1, 2]
+				]
+			};
+
+			var explorer = new Explorer({
+				pageTplId : "#page",
+				sectionTplId : "#section",
+				onPageCreated : function() {
+					console.log("page created", arguments);
+				},
+				onSectionCreated : function(sectionData) {
+					sectionData.node.querySelector("h2").innerHTML = "section#" + sectionData.sectionId;
+				},
+				onPageSwitch : function(currentPage, targetPage, direction) {
+					console.log("page switch", currentPage, targetPage);
+
+					if(!currentPage || !targetPage) {
+						return false;
+					}
+
+					if(direction)  {
+						TweenMax.fromTo(currentPage.node, 0.25, {
+							x : "0",
+						}, {
+							x : "-100%",
+							onStart : function() {
+								currentPage.node.classList.add("animated");
+							},
+							onComplete : function() {
+								currentPage.node.classList.add("hidden");
+								currentPage.node.classList.remove("animated");
+							}
+						});
+
+						TweenMax.fromTo(targetPage.node, 0.25, {
+							x : "100%",
+						}, {
+							x : "0%",
+							onStart : function() {
+								console.log("1")
+								targetPage.node.classList.remove("hidden");
+								targetPage.node.classList.add("animated")
+							},
+							onComplete : function() {
+								currentPage.node.classList.remove("animated");
+							}
+
+						})
+					} else {
+						TweenMax.fromTo(currentPage.node, 0.25, {
+							x : "0%",
+						}, {
+							x : "100%",
+							onStart : function() {
+								currentPage.node.classList.add("animated");
+							},
+							onComplete : function() {
+								currentPage.node.classList.add("hidden");
+								currentPage.node.classList.remove("animated");
+
+							}
+						});
+
+						TweenMax.fromTo(targetPage.node, 0.25, {
+							x : "-100%",
+						}, {
+							x : "0%",
+							onStart : function() {
+								console.log("1")
+								targetPage.node.classList.remove("hidden");
+								currentPage.node.classList.add("animated");
+							},
+							onComplete : function() {
+								currentPage.node.classList.add("hidden");
+								currentPage.node.classList.remove("animated");
+
+							}
+						})
+					}
+
+					return true;
+				},
+				onSectionSwitch : function(currentSection, targetSection, direction) {
+					console.log("section switch", currentSection, targetSection);
+				}
+			});
+
+			window.explorer = explorer;
+
+			explorer.createSiteFromConfig(siteConfig);
+		})		
+	</script>
+	<div id="page" class="template">
+		<div class="page hidden"></div>
+	</div>
+	<div id="section" class="template">
+		<div class="section">
+			<h2></h2>
+			<p></p>
+		</div>
+	</div>
+
+</body>
+</html>

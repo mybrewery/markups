@@ -1,0 +1,110 @@
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.align-center {
+	align-items: center;
+
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.space-around {
+	justify-content: space-around;
+}
+
+.no-display {
+	display: none;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.full-width {
+	width: 100%;
+}
+
+html, body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+.section {
+	height: 100%;
+}
+
+.section.intro {
+	color: white;
+}
+
+.section .header {
+	width: 100vw;
+	margin: 28px 68px 0px;
+	position: fixed;
+	z-index: 1;
+}
+
+.logo div:first-child {
+	margin-right: 20px;
+	border-radius: 50%;
+	border: 1px solid #001311;
+	overflow: hidden;
+	height: 48px;
+	width: 48px;
+}
+
+.logo .column.space-between p {
+	margin: 0;
+}
+
+.logo .column.space-between p:first-child {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.contacts > p {
+	margin: 0px 24px 0px 8px;
+	font-weight: bold;
+}
+
+.button {
+	background: white;
+	color: black;
+    text-transform: uppercase;
+    border-radius: 25px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.button p {
+	margin: 0;
+}
+
+.slider {
+	position: relative;
+	height: 100vh;
+}
+
+.next {
+	position: absolute;
+	right: 68px;
+}
+
+.prev {
+	position: absolute;
+	left: 58px;
+}
