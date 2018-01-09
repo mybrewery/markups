@@ -1,16 +1,16 @@
 function createSlider(slider, delay){
 
-    var prevButton = slider.querySelector(".prev");
-    var nextButton = slider.querySelector(".next");
+    var clickButton = slider.getElementsByClassName("slide-point");
 
-    prevButton.onclick = function(){
+ /*  prevButton.onclick = function(num){
         nextSlide(-1);
     }
-
-    nextButton.onclick = function(){
-        nextSlide(1);
+*/  for (var i = 0; i < clickButton.length; i++) {
+        clickButton[i].onclick = function(evt){
+            nextSlide(1);
+        }
     }
-
+    
     var index = 1;
     slideShow(index);
     var sliding;
@@ -41,8 +41,8 @@ function createSlider(slider, delay){
     }
 
     function slideShow(num) {   
-        var slides = slider.getElementsByClassName("box");
-
+        var slides = slider.getElementsByClassName("slide-box");
+    
         if (num > slides.length) { 
             index = 1; 
         }
@@ -51,9 +51,11 @@ function createSlider(slider, delay){
         }
 
         for (var i = 0; i < slides.length; i++) {  
-            slides[i].style.display = "none";  
+            slides[i].style.display = "none";
+            clickButton[i].classList.remove("active-point") 
         }
 
-        slides[index - 1].style.display = "block";  
+        slides[index - 1].style.display = "flex";  
+        clickButton[index - 1].className += " active-point";
     } 
 }
