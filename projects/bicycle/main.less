@@ -92,7 +92,7 @@
 
 	.to-top {
 		top: 0;
-	}	
+	}
 }
 
 html, body {
@@ -100,8 +100,8 @@ html, body {
 	height: 100%;
 	margin: 0;
 	font-family: "Lato", sans-serif;
+	user-select: none;
 }
-
 
 h3 {
 	text-transform: uppercase;
@@ -109,6 +109,7 @@ h3 {
 }
 
 .section {
+	oultine: none;
 	& .navigation {
 		margin-top: 30px;
 
@@ -248,7 +249,6 @@ h3 {
 
 				&>p {
 					font-size: 24px;
-					font-style: italic;
 					color: @darkGreyColor;
 					margin-bottom: 100px;
 					margin-top: 28px;
@@ -317,6 +317,72 @@ h3 {
 			&.item-8 {
 				grid-row: ~"2/3";
 				grid-column: ~"6/7";
+			}
+		}
+	}
+
+	&.shop {
+		background: #282f35;
+    	padding: 4% 0px;
+
+    	div {
+    		border: 1px solid rgba(255, 255, 255, 0.5);
+    		padding: 0px 58px;
+
+    		a {
+    			text-decoration: none;
+
+    			h3 {
+    				color: white;
+    				text-align: center;
+    				line-height: 1.2;
+    				font-size: 14px;
+    			}
+    		}
+    	}
+	}
+
+	&.email {
+		height: 40%;
+		padding: 6% 0%;
+
+		p {
+			margin: 36px 0;
+			font-size: 24px;
+			font-style: italic;
+    		color: @darkGreyColor;
+		}
+
+		.row {
+			justify-content: space-between;
+			width: 534px;
+    		height: 70px;
+
+			input {
+				padding-left: 20px;
+				font-size: 20px;
+				font-style: italic;
+    			color: @darkGreyColor;
+    			width: 400px;
+    			margin-right: 10px;
+
+    			&::placeholder {
+    				color: #c8c8c8;
+    				font-size: 20px;
+    			}
+			}
+
+			button {
+				border: none;
+				background: #64c29e;
+				width: 128px;
+
+				h3 {
+					color: white;
+					font-size: 24px;
+    				margin: 0;
+    				font-weight: 100;
+				}
 			}
 		}
 	}

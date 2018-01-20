@@ -1,0 +1,151 @@
+@import url(http://allfont.ru/allfont.css?fonts=open-sans-extrabold);
+@import url(http://allfont.ru/allfont.css?fonts=open-sans);
+@import url(http://allfont.ru/allfont.css?fonts=open-sans-semibold);
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.border-box {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.navigation {
+	width: 100%;
+	background-color: #76c7c0;
+	padding: 0% 11%;
+}
+
+.navigation .row.logo p:first-child{
+	font-family: "Open Sans Extrabold", arial;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: white;
+}
+
+.navigation .row.logo p:last-child {
+	font-family: "Open Sans", arial;
+	font-size: 25px;
+	color: white;
+	margin-left: 2px;
+}
+
+.navigation nav {
+	width: 51%;
+	min-width: 500px;
+}
+
+.navigation nav .link {
+	font-family: "Open Sans Semibold", arial;
+	font-size: 13px;
+	color: white;
+	text-transform: uppercase;
+	display: flex;
+}
+
+.navigation nav .list {
+	position: relative;
+}
+
+.navigation .drop-down-box {
+	position: absolute;
+	padding-top: 13px;
+	width: 100%;
+}
+
+.navigation .drop-down {
+	display: none;
+	background-color: #e5655d;
+	font-family: "Open Sans Semibold", arial;
+	color: white;
+	font-size: 13px;
+    border-radius: 3px;
+}
+
+.navigation .drop-down:before {
+	content:"";
+    border-left: 6px solid transparent;
+ 	border-right: 6px solid transparent;
+  	border-bottom: 6px solid #e2534b;
+    position: absolute;
+    top: 7px;
+    left: 17px;
+}
+
+.navigation .drop-down a {
+	border-bottom: 4px solid #e2534b;
+	border-right: 4px solid #e2534b;
+	border-left: 4px solid #e2534b;
+	padding: 3px 10px;
+	border-radius: 3px;
+}
+
+.navigation .drop-down a:first-child {
+	border-top: 4px solid #e2534b;
+}
+
+.navigation nav .list:hover .drop-down{
+	display: flex;
+	flex-direction: column;
+}
+
+.navigation nav a[name="portfolio"] {
+	background: #e8645a;
+    padding: 8px 14px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 0px 0px #e2534b;
+}
+
+.navigation nav a[name="portfolio"] p{
+	margin: 0;
+}
+
+.navigation .drop-down {
+	width: 100%;
+}
+
+.navigation .drop-down p{
+	color: white;
+	margin: 0;
+}
+
+.nav-active {
+	background: #62a29e;
+    padding: 8px 14px;
+    font-size: 14px;
+    box-shadow: 0px 2px 0px 0px #528b86;
+    border-radius: 3px;
+}
+
+.material-icons {
+	font-size: 18px;
+	color: white;
+}
+

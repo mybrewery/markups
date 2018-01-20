@@ -6,9 +6,13 @@ function createSlider(slider, delay){
         nextSlide(-1);
     }
 */  for (var i = 0; i < clickButton.length; i++) {
-        clickButton[i].onclick = function(evt){
-            nextSlide(1);
+        clickButton[i].onclick = function(dot){
+            findSlide(dot);
         }
+    }
+
+    function findSlide(el) {
+         ]      
     }
     
     var index = 1;
@@ -52,7 +56,7 @@ function createSlider(slider, delay){
 
         for (var i = 0; i < slides.length; i++) {  
             slides[i].style.display = "none";
-            clickButton[i].classList.remove("active-point") 
+            clickButton[i].classList.remove("active-point"); 
         }
 
         slides[index - 1].style.display = "flex";  
