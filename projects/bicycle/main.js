@@ -10,10 +10,6 @@ function createSlider(slider, delay){
             findSlide(dot);
         }
     }
-
-    function findSlide(el) {
-         ]      
-    }
     
     var index = 1;
     slideShow(index);

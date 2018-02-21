@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mybrewery/markups#readme",
   "dependencies": {
+    "jquery": "^3.3.1",
     "less": "latest"
   }
 }

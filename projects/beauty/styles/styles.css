@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+@font-face {
+	font-family: Space;
+	src: url(..fonts/squarespace-ui-font.ttf);
+}
+
+@keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes viezd {
+	0% 	 { top: 0; }
+	100%  { top: 100%; } 
+}
+
+/*@media (min-width: 700px) {
+	#logo {
+		position: absolute;
+	}
+}*/
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.none {
+	display: none;
+}
+
+html, body {
+	width: 100%;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#logo img {
+	width: 129px;
+	height: 129px;
+	display: block;
+}
+
+header .navigation {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	background-color: white;
+}
+
+header .navigation-bar {
+	position: fixed;
+	padding: 5px 0;
+	width: 100%;
+	z-index: 2;
+	-webkit-transition: viezd .14s ease-in-out;
+    background-color: rgba(255,255,255,.95);
+}
+
+header .navigation div:hover > a, header .navigation-bar div:hover > a {
+	color: #231f20;
+}
+
+header .navigation a, header .navigation-bar a {
+	display: block;
+	font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.75em 1em;
+    color: rgba(83,105,116,.7);
+    transition: 0.75s;
+    line-height: 1em;
+}
+
+#logo a {
+	padding: 0;
+}
+
+/*slider*/
+
+.image-wrapper {
+	display: none;
+}
+
+.image-wrapper.slider-current {
+	display: block;
+}
+
+#jslider {
+	width: 800px;
+	height: 500px;
+    position: relative;
+    user-select: none;
+}
+
+#webslider {
+	width: 800px;
+	height: 500px;
+    position: relative;
+    user-select: none;
+}
+
+.slides-wrapper {
+	width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: white;
+}
+
+.slider-control {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image-wrapper {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    -webkit-animation: appear 1s;
+}
+
+.image-wrapper img {
+	height: 100%;
+}
+
+#webslider .slider-prev-button {
+	position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+}
+
+#webslider .slider-prev-button:before {
+    color: white;
+    font-size: 32px;
+    font-family: Space;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    content: "\e02c";
+}
+
+#webslider .slider-next-button {
+	position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+}
+
+#webslider .slider-next-button:before {
+    color: white;
+    font-size: 32px;
+    font-family: Space;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+    content: "\e02d";
+}
+
+#webslider .slider-indicators {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    width: 56px;
+    justify-content: space-between;
+}
+
+#webslider .slider-indicators .slider-indicator {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.1);
+    cursor: pointer;
+    background-color: rgba(255,255,255,.1);
+}
+
+#webslider .slider-indicator.slider-indicator-active {
+    background: #fff;
+}
+
+/**/
+
+.intro {
+	background-color: #231f20;
+	text-align: center;
+}
+
+.intro h2 {
+	color: #d7b49e;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280%;
+    line-height: 1.05;
+}
+
+h2:after {
+	content: "";
+	border-bottom: 4px solid #5d6770;
+	display: block;
+	width: 100px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50px);
+}
+
+.intro p {
+	font-family: "Marck Script", cursive;
+	color: #fff;
+    font-size: 180%;
+    padding: 0 20%;
+}
+
+.services {
+	position: relative;
+	width: 100%;
+}
+
+.services .back {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;	
+}
+
+.services img{
+	width: 100%;
+    height: 100%;
+}
+
+.services h2 {
+	margin: 1em 0;
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+	font-size: 50px;
+}
+
+.services p {
+	font-family: "Roboto Condensed", sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 18px;
+	-webkit-margin-after: -6px;
+}
+
+.services .list a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.services .list p {
+	display: block;
+    border-bottom: 2px solid;
+    font-size: 146px;
+    -webkit-margin-before: 10px;
+    -webkit-margin-after: -2px;
+}
+
+.services .list a:last-child {
+	margin-bottom: 52px;
+}
+
+footer {
+	width: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+    background: #231f20;
+    padding: 68px 34px;
+    color: white;
+    box-sizing: border-box;
+}
+
+footer h3 {
+	letter-spacing: 1px;
+}
+
+footer a {
+	display: block;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-decoration: none;
+    color: white;
+}
+

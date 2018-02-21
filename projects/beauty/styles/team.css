@@ -1,0 +1,93 @@
+@keyframes opacity {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.animate {
+	-webkit-animation: opacity 1s;
+}
+
+.album {
+    padding: 100px 34px;
+    box-sizing: border-box;
+}
+
+.album .row .box {
+	max-width: 384px;
+    max-height: 382px;
+    overflow: hidden;
+	margin: 17px;
+	cursor: pointer;
+}
+
+.album > div:first-child {
+	margin-top: -17px;
+}
+
+.album .member {
+	width: 100%;
+}
+
+#full {
+	height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: rgba(255,255,255,.9);
+    padding: 8% 10px 10%; 
+    box-sizing: border-box;
+    -webkit-animation: opacity 1s;
+}
+
+#full > div.row > div:first-child {
+	height: 540px;
+	width: 540px;
+	overflow: hidden;
+}
+
+#full img {
+	width: 100%;
+}
+
+#full .about {
+	position: relative;
+	background-color: #edf4f7;
+	width: 50%;
+	height: fit-content;
+	padding: 1.5rem;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed";
+}
+
+#full .about h3 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+#full .about h3:after {
+	content: "";
+    width: 100px;
+    height: 2px;
+    border-bottom: 2px solid #000;
+    display: block;
+    margin: 10px 0 15px 0;
+}
+
+#full .about p span {
+	font-weight: bold;
+}
+
+#close {
+	position: absolute;
+	right: 0;
+    top: 0;
+    line-height: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+}
