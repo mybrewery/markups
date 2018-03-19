@@ -30,39 +30,9 @@ html, body {
 	margin: 0;
 }
 
-header .navigation {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	position: relative;
-	background-color: white;
-}
-
-header .navigation div:hover > a {
-	color: black;
-}
-
-#logo a {
-	padding: 0;
-}
-
-#logo img {
-	width: 129px;
-	height: 129px;
-	display: block;
-}
-
-header .navigation a {
-	display: block;
-	font-family: "Roboto Condensed", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 0.75em 1em;
-    color: rgba(83,105,116,.7);
-    transition: 0.75s;
-    line-height: 1em;
+header .navigation .button-wrap {
+	-webkit-animation: appear 1s;
+	opacity: 1;
 }
 
 .menu {

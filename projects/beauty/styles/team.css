@@ -1,14 +1,10 @@
-@keyframes opacity {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
-
 .hidden {
 	visibility: hidden;
 }
 
-.animate {
-	-webkit-animation: opacity 1s;
+header .navigation .button-wrap {
+    -webkit-animation: appear 1s;
+    opacity: 1;
 }
 
 .album {
@@ -28,6 +24,10 @@
 	margin-top: -17px;
 }
 
+.album > div:nth-child(2){
+	margin-bottom: -17px;
+}
+
 .album .member {
 	width: 100%;
 }
@@ -41,7 +41,6 @@
     background-color: rgba(255,255,255,.9);
     padding: 8% 10px 10%; 
     box-sizing: border-box;
-    -webkit-animation: opacity 1s;
 }
 
 #full > div.row > div:first-child {
@@ -90,4 +89,5 @@
     width: 25px;
     text-align: center;
     cursor: pointer;
+    background-color: rgba(255,255,255,.3);
 }

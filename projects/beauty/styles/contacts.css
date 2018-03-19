@@ -3,6 +3,11 @@
 	src: url(fonts/SusanBookRegular.otf);
 }
 
+header .navigation .button-wrap {
+	-webkit-animation: appear 1s;
+	opacity: 1;
+}
+
 .contact {
 	position: relative;
 	width: 100%;
@@ -25,6 +30,17 @@
 	font-size: 48px;
     line-height: 1.5;
     margin: 0;
+}
+
+.contact .contact-item h2:after {
+	content: "";
+	border-bottom: 4px solid #5d6770;
+	display: block;
+	width: 100px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50px);
 }
 
 .contact .contact-item .info {

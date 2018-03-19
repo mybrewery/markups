@@ -1,24 +1,20 @@
+var fullWindow = document.getElementById("full");
 var members = document.getElementsByClassName("member");
 
 var closeButton = document.getElementById("close");
 
 closeButton.addEventListener("click", function() {
-	full.classList.add("hidden");
+	fullWindow.classList.remove("animation");
+	fullWindow.classList.add("rev-animation");
 })
-/*
-function Member(name, description, imageSrc) {
-	this.name = name;
-	this.des = description;
-	this.image = imageSrc;
-}*/
 
 Member = {
 	name: ["Маша", "Гриша", "Оля", "Михаил"],
 
-	description: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Привет-привет.", 
-	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Привет-привет.",
-	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Привет-привет.",
-	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Привет-привет."]
+	description: ["1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Привет-привет.", 
+	"2Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Привет-привет.",
+	"3Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Привет-привет.",
+	"4Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Привет-привет."]
 }
 
 function createInfo(index) {
@@ -27,7 +23,6 @@ function createInfo(index) {
 
 	name.innerText = Member.name[index];
 	info.innerText = Member.description[index];
-	console.log(name, info);
 } 
 
 for (var i = 0; i < members.length; i++) {
@@ -37,10 +32,18 @@ for (var i = 0; i < members.length; i++) {
 
 function showFull(evtSrc) {
 	var fullImage = document.getElementById("full-image");
-	var fullWindow = document.getElementById("full");
 	fullImage.src = evtSrc.target.src;
 	var index = evtSrc.target.getAttribute("index");
 	createInfo(index);
 	fullWindow.classList.remove("hidden");
+	fullWindow.classList.remove("rev-animation");
+	fullWindow.classList.add("animation");
 }
+
+
+fullWindow.addEventListener("animationend", function(el) {
+	if(el.animationName == "rev-appear") {
+		fullWindow.classList.add("hidden");
+	}
+})
 

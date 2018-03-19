@@ -46,7 +46,7 @@ Slider.prototype = {
 	startSlideShow: function(num) {
 		this._intervalId = setInterval(function() {
 			this.setPosition(this._position + 1);
-		}.bind(this), 3000)
+		}.bind(this), 4000)
 	},
 
 	stopSlideShow: function() {
