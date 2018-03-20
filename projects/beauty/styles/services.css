@@ -70,6 +70,7 @@ header .navigation .button-wrap {
     max-width: 469px;
     box-sizing: border-box;
     height: fit-content;
+    align-self: flex-start;
 }
 
 .menu > .column h2 {
@@ -96,7 +97,7 @@ header .navigation .button-wrap {
 
 .menu .service-item {
 	display: grid;
-	grid-template-rows: 50% 50%;
+	grid-template-rows: 29px 50%;
 	grid-template-columns: 1fr 40px;
 }
 

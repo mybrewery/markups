@@ -10,6 +10,8 @@ var Slider = function(target) {
 	this._indicators = [];
 	this._setupLayout(target);
 	this.addMultiple(this._urls);
+	target.classList.add("ready");
+	console.log(target);
 }
 
 Slider.prototype = {
