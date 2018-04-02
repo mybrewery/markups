@@ -36,11 +36,11 @@
     100% { opacity: 1; }
 }
 
-/*@media (min-width: 700px) {
-	#logo {
-		position: absolute;
+@media (min-width: 700px) {
+	.navigation {
+		
 	}
-}*/
+}
 
 .row {
 	display: flex;
