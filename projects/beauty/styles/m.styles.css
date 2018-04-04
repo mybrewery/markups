@@ -1,0 +1,39 @@
+@media only screen and (max-device-width: 600px) {
+	.navigation .button-wrap {
+		display: none;
+	}
+
+	.intro {
+		padding: 40px 0;
+	}
+
+	.intro h2, .intro p {
+		padding: 17px 10px;
+		margin: 0;
+	}
+
+	p, h2 {
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+
+	.mobile-nav {
+		display: block;
+	}
+
+	.navigation-bar {
+		width: 40px !important;
+    	top: 20px;
+    	height: 36px;
+    	left: 20px;
+    	padding: 10px !important;
+    	flex-direction: column;
+    }
+
+    .navigation-bar .top {
+    	margin-top: 0;
+    }
+
+	.navigation-bar .nav-item {
+		display: none;
+	}
+}

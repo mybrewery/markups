@@ -57,3 +57,42 @@ function createGallery(element) {
 for (var i = 0; i < 7; i++) {
 	createGallery(data.data[i]);	
 }
+
+var mobNav = document.getElementById("full-nav");
+var menuTopLine = document.getElementsByClassName("top")[0];
+var menuBottomLine = document.getElementsByClassName("bottom")[0];
+var menuLines = document.getElementsByClassName("menu-line");
+var closeButton = document.getElementsByClassName("close");
+var closeLeft = document.getElementsByClassName("left")[0];
+var closeRight = document.getElementsByClassName("right")[0];
+
+
+function showMenu() {
+	mobNav.classList.remove("hidden");
+	menuTopLine.classList.add("menu-animate-top");
+	menuBottomLine.classList.add("menu-animate-bottom");
+	for (var i = 0; i < menuLines.length; i++) {
+		menuLines[i].classList.add("hidden");
+	}
+	for (var i = 0; i < closeButton.length; i++) {
+		closeButton[i].classList.remove("hidden");
+	}
+	closeLeft.classList.add("close-animate-one");
+	closeRight.classList.add("close-animate-two");
+}
+
+function closeMenu() {
+	for (var i = 0; i < menuLines.length; i++) {
+		menuLines[i].classList.remove("hidden");
+	}
+	for (var i = 0; i < closeButton.length; i++) {
+		closeButton[i].classList.add("hidden");
+	}
+	mobNav.classList.add("hidden");
+	menuTopLine.classList.remove("menu-animate-top");
+	menuBottomLine.classList.remove("menu-animate-bottom");
+	closeLeft.classList.remove("close-animate-one");
+	closeRight.classList.remove("close-animate-two");
+
+
+}

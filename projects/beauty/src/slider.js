@@ -1,6 +1,11 @@
 "use strict";
 
-var Slider = function(target) {
+var Slider = function(target, options) {
+	this._options = options || {
+		mainDimension: "width",
+		aspectRatio:   4/3
+	};
+
 	this._position = -1;
 	this._amount = 0;
 
@@ -11,6 +16,10 @@ var Slider = function(target) {
 	this._setupLayout(target);
 	this.addMultiple(this._urls);
 	target.classList.add("ready");
+	this._updateSize();
+
+	window.addEventListener("resize", this._updateSize.bind(this));
+	window.addEventListener("orientationchange", this._updateSize.bind(this));
 	console.log(target);
 }
 
@@ -32,13 +41,15 @@ Slider.prototype = {
 	setPosition: function(value) {
 		value = (this._images.length + value) % this._images.length;
 
-		this.tools.loop(this._images, function(image){
-			image.classList.remove("slider-current");
+		this.tools.loop(this._images, function(wrapper){
+			wrapper.classList.remove("slider-current");
 		}.bind(this));
+
 		this.tools.loop(this._indicators, function(dot){
 			dot.classList.remove("slider-indicator-active");
 		}.bind(this));
 
+		this._fitImageSize(this._images[value].image);
 		this._images[value].classList.add("slider-current");
 		this._indicators[value].classList.add("slider-indicator-active");
 
@@ -53,6 +64,31 @@ Slider.prototype = {
 
 	stopSlideShow: function() {
 		clearInterval(this._intervalId);
+	},
+
+	_fitImageSize: function(image) {
+		var imageAspectRatio = image.naturalWidth / image.naturalHeight;
+		var sliderAspectRatio = this._options.aspectRatio;
+
+		if(imageAspectRatio > sliderAspectRatio) {
+			image.style.height = "100%"
+		} else {
+			image.style.width = "100%"
+		}
+		console.log(imageAspectRatio, this._aspectRatio);
+	},
+
+	_updateSize: function() {
+		var currentWidth = this._currentWidth = this._target.clientWidth;
+		var currentHeight = this._currentHeight = this._target.clientHeight;
+
+		if(this._options.mainDimension === "width") {
+			this._currentHeight = currentWidth / this._options.aspectRatio;
+			this._target.style.height = this._currentHeight + "px";
+		} else {
+			this._currentWidth = currentHeight / this._options.aspectRatio;
+			this._target.style.width = this._currentWidth + "px";
+		}
 	},
 
 	_extractImages: function(target) {
@@ -72,6 +108,7 @@ Slider.prototype = {
 		wrapper.classList.add("image-wrapper");
 		wrapper.setAttribute("data-index", index);
 		wrapper.appendChild(image);
+		wrapper.image = image;
 
 		return wrapper;
 	},

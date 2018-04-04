@@ -4,8 +4,10 @@
 	<title>Центр превентивной терапии</title>
 	<link rel="icon" href="images/logo.png">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/m.styles.css">
 	<script type="text/javascript" src="src/slider.js"></script>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
 <body class="column align-center">
 	<header class="column align-center">
@@ -21,6 +23,17 @@
 			</div>
 		</div>
 		<div class="navigation-bar row align-center justify-center none">
+			<div class="nav-item"><a href="services.html">Услуги</a></div>
+			<div class="nav-item"><a href="seminar.html">Семинары</a></div>
+			<div class="nav-item"><a href="team.html">Команда</a></div>
+			<div class="nav-item"><a href="contacts.html">Контакты</a></div>
+			<div class="menu-line top" onclick="showMenu()"></div><div class="menu-line middle" onclick="showMenu()"></div><div class="menu-line bottom" onclick="showMenu()"></div>
+		</div>
+		<div class="mobile-nav none">
+			<div class="menu-line top" onclick="showMenu()"></div><div class="menu-line middle" onclick="showMenu()"></div><div class="menu-line bottom" onclick="showMenu()"></div>
+			<div class="close left hidden" onclick="closeMenu()"></div><div class="close right hidden" onclick="closeMenu()"></div>
+		</div>
+		<div id="full-nav" class="column align-center justify-center hidden">
 			<div><a href="services.html">Услуги</a></div>
 			<div><a href="seminar.html">Семинары</a></div>
 			<div><a href="team.html">Команда</a></div>
@@ -28,13 +41,16 @@
 		</div>
 	</header>
 	<div id="jslider">
-		<img src="images/slide.png">
-		<img src="images/slide.png">
-		<img src="images/slide.png">
+		<img src="images/ball.jpg">
+		<img src="images/castle.jpg">
+		<img src="images/mountain.jpg">
 	</div>
 	<script type="text/javascript">
-			var slider = new Slider(jslider);
-			slider.startSlideShow();
+			var oneSlider = new Slider(jslider, {
+				mainDimension: "width",
+				aspectRatio: 2/1.4
+			});
+			oneSlider.startSlideShow();
 	</script>
 	<div class="intro column justify-center">
 		<h2>Lorem ipsum<br> dolor sit amet</h2>
@@ -42,8 +58,8 @@
 	</div>
 	<div id="webslider">
 			<img src="images/castle.jpg">
-			<img src="images/paint.jpg">
-			<img src="images/van.jpg">
+			<img src="images/ball.jpg">
+			<img src="images/mountain.jpg">
 	</div>
 	<div class="services column	align-center">
 		<h2>Lorem</h2>
