@@ -37,7 +37,7 @@ header .navigation .button-wrap {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 3000;
     background-color: rgba(255,255,255,.9);
     padding: 8% 10px 10%; 
     box-sizing: border-box;

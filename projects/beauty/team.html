@@ -2,9 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<title>Команда</title>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/team.css">
+	<link rel="stylesheet" type="text/css" href="styles/m.styles.css">
 	<link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -19,6 +21,18 @@
 				<div><a href="team.html" class="link-active">Команда</a></div>
 				<div><a href="contacts.html">Контакты</a></div>
 			</div>
+		</div>
+		<div class="mobile-nav none">
+			<div class="menu-line top" onclick="showMenu()"></div><div class="menu-line middle" onclick="showMenu()"></div><div class="menu-line bottom" onclick="showMenu()"></div>
+			<div class="close-wrap hidden" onclick="closeMenu()">
+				<div class="close left hidden"></div><div class="close right hidden" onclick="closeMenu()"></div>
+			</div>
+		</div>
+		<div id="full-nav" class="column align-center justify-center none">
+			<div><a href="services.html">Услуги</a></div>
+			<div><a href="seminar.html">Семинары</a></div>
+			<div><a href="team.html">Команда</a></div>
+			<div><a href="contacts.html">Контакты</a></div>
 		</div>
 	</header>
 	<div class="album column align-center">
@@ -42,13 +56,22 @@
 		</div>
 	</div>
 	<footer class="column align-center">
-		<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+		<p class="to-top">Back to top</p>
+		<script type="text/javascript">
+			var scrollTop = document.getElementsByClassName("to-top")[0];
+			scrollTop.addEventListener("click", function() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			})
+		</script>
+		<h3>Lorem ipsum dolor sit amet</h3>
 		<div class="row">
-			<a target="_blank" href="https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9E%D0%B2%D0%B0%D0%BD%D0%B5%D1%81%D0%B0+%D0%A2%D1%83%D0%BC%D0%B0%D0%BD%D1%8F%D0%BD%D0%B0,+15%D0%90,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.443997,30.6032978,19z/data=!4m5!3m4!1s0x40d4cff4fbd52513:0xc5eb3eb6b3d981ae!8m2!3d50.443997!4d30.603845">г. Киев, ул. Ованеса Туманяна 15а</a>
-			<span>&nbsp;/&nbsp;</span>
+			<div class="row"><a target="_blank" href="https://www.google.com.ua/maps/place/%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9E%D0%B2%D0%B0%D0%BD%D0%B5%D1%81%D0%B0+%D0%A2%D1%83%D0%BC%D0%B0%D0%BD%D1%8F%D0%BD%D0%B0,+15%D0%90,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.443997,30.6032978,19z/data=!4m5!3m4!1s0x40d4cff4fbd52513:0xc5eb3eb6b3d981ae!8m2!3d50.443997!4d30.603845">г. Киев, ул. Ованеса Туманяна 15а</a>
+			<span>&nbsp;/&nbsp;</span></div>
 			<a>+380501234567</a>
 		</div>
 	</footer>
 	<script type="text/javascript" src="src/team.js"></script>
+	<script type="text/javascript" src="src/mob.js"></script>
 </body>
 </html>

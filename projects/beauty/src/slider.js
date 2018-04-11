@@ -20,7 +20,6 @@ var Slider = function(target, options) {
 
 	window.addEventListener("resize", this._updateSize.bind(this));
 	window.addEventListener("orientationchange", this._updateSize.bind(this));
-	console.log(target);
 }
 
 Slider.prototype = {
@@ -75,7 +74,6 @@ Slider.prototype = {
 		} else {
 			image.style.width = "100%"
 		}
-		console.log(imageAspectRatio, this._aspectRatio);
 	},
 
 	_updateSize: function() {

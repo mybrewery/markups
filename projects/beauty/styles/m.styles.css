@@ -1,4 +1,15 @@
 @media only screen and (max-device-width: 600px) {
+	/*index*/
+	.no-scroll {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	#logo {
+		width: 50px;
+    	height: 50%;
+	}
+
 	.navigation .button-wrap {
 		display: none;
 	}
@@ -29,11 +40,167 @@
     	flex-direction: column;
     }
 
+    .navigation-bar .menu-wrap {
+    	display: block;
+	}
+
     .navigation-bar .top {
     	margin-top: 0;
     }
 
 	.navigation-bar .nav-item {
 		display: none;
+	}
+
+	.intro h2, .services h2 {
+		font-size: 26px;
+	}
+
+	.intro p {
+		font-size: 110%;
+	}
+
+	.services > p {
+		font-size: 14px;
+		text-align: center;
+    	width: 300px;
+	}
+
+	.services .list p {
+		font-size: 600%;
+	}
+
+	.gallery .image-box {
+		height: 80px;
+    	width: 80px;
+	}
+
+	.advices p {
+		font-size: 16px;
+	}
+
+	footer {
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	footer {
+		padding: 20px;
+	}
+
+	footer > .row{
+		flex-direction: column;
+		align-items: center;
+		height: 80px;
+    	justify-content: center;
+	}
+
+	footer .to-top {
+		display: block;
+		font-size: 14px;
+	}
+
+	footer > p, footer h3 {
+		margin: 0;
+
+	}
+
+	footer h3 {
+		font-size: 24px;
+		margin-bottom: 10px;
+    	margin-top: 17px
+	}
+
+	footer .row .row a:first-child {
+		margin-bottom: 10px;
+	}
+
+	/*services*/
+
+	.menu-services {
+		flex-direction: column;
+		padding: 40px 20px;
+	}
+
+	.menu-services .column {
+		margin-bottom: 34px;
+	}
+
+	.menu-services .back {
+		height: 400vh;
+    	width: max-content;
+	}
+
+	.menu-services .back img {
+		height: 100%;
+	}
+
+	/*seminars*/
+
+	.menu, .album {
+		padding: 74px 34px;
+	}
+
+	.menu .item {
+		flex-direction: column;
+	}
+
+	.menu .item .image-box {
+		width: auto;
+		height: auto;
+	}
+
+	.menu .item .image-box img {
+		width: 100%;
+		height: auto;
+	}
+
+	.menu .item .description {
+		width: 100%;
+	}
+
+	/*team*/
+
+	.album, .menu {
+		border-top: 1px solid #c8c7c7;
+	}
+
+	.album > div {
+		flex-direction: column;
+	}
+
+	.album .row .box {
+		max-height: 41vh;
+	}
+
+	#full {
+		padding: 10px;
+	}
+
+	#full > .row {
+		flex-direction: column;
+	}
+
+	#full > div.row > div:first-child {
+		width: 100%;
+    	height: 55vh;
+	}
+
+	#full .about {
+		width: 100%;
+	}
+
+	#close {
+		top: -55vh;
+	}
+
+	/*contacts*/ 
+
+	.contact .back img {
+		height: 100%;
+	}
+
+	.contact .back {
+		width: max-content;
 	}
 }

@@ -35,7 +35,7 @@ header .navigation .button-wrap {
 	opacity: 1;
 }
 
-.menu {
+.menu-services {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
@@ -44,7 +44,7 @@ header .navigation .button-wrap {
 	font-family: "Roboto Condensed";
 }
 
-.menu .back {
+.menu-services .back {
 	position: absolute;
 	z-index: -1;
 	width: 100%;
@@ -53,15 +53,15 @@ header .navigation .button-wrap {
     left: 0;	
 }
 
-.menu .back img {
+.menu-services .back img {
 	width: 100%;
 }
 
-.menu > .column > * {
+.menu-services > .column > * {
 	display: block;
 }
 
-.menu > .column {
+.menu-services > .column {
 	background-color: #fff;
 	margin-left: 17px;
     margin-right: 17px;
@@ -73,7 +73,7 @@ header .navigation .button-wrap {
     align-self: flex-start;
 }
 
-.menu > .column h2 {
+.menu-services > .column h2 {
 	text-align: center;
     border-bottom: 1px solid #231f20;
     text-transform: uppercase;
@@ -85,7 +85,7 @@ header .navigation .button-wrap {
     margin-top: 0;
 }
 
-.menu > .column > span {
+.menu-services > .column > span {
 	text-align: right;
     text-transform: uppercase;
     color: rgba(83,105,116,.7);
@@ -95,33 +95,33 @@ header .navigation .button-wrap {
     font-size: 15px;
 }
 
-.menu .service-item {
+.menu-services .service-item {
 	display: grid;
 	grid-template-rows: 29px 50%;
 	grid-template-columns: 1fr 40px;
 }
 
-.menu .service-item > * {
+.menu-services .service-item > * {
 	margin: 0;
 }
 
-.menu .service-item {
+.menu-services .service-item {
 	margin-top: 40px;
 	position: relative;
 }
 
-.menu .service-item span {
+.menu-services .service-item span {
 	text-align: right;
 	font-size: 15px;
 }
 
-.menu .service-item p:first-child {
+.menu-services .service-item p:first-child {
 	margin-bottom: 10px;
 	text-transform: uppercase;
     font-weight: 700;
 }
 
-.menu .service-item .description {
+.menu-services .service-item .description {
 	cursor: pointer;
 	height: 60px;
 	overflow: hidden;	
@@ -133,7 +133,7 @@ header .navigation .button-wrap {
     -webkit-text-fill-color: transparent;
 }
 
-.menu .service-item .text {
+.menu-services .service-item .text {
 	z-index: 10;
     position: absolute;
     width: 100%;
